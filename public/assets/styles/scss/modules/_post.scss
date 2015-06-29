@@ -1,0 +1,45 @@
+body{
+	#post{
+		//margin-bottom: 50px;
+		.article{
+			margin-top:5vh;
+			margin-bottom: 100px;
+			.date{
+				.month{
+					font-size: 15px;
+					text-transform: uppercase;
+					font-weight: bold;
+				}
+				.day{
+					font-size: 22px;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+				.year{
+					font-size: 15px;
+					text-transform: uppercase;
+					font-weight: 100;
+				}
+			}
+			.title{
+				color: #333333;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 100%;
+			}
+			.author{
+				color:#89a19d;
+				font-weight: 350;
+			}
+			.body-content{
+				font-weight: 300;
+				color:#4c5859;
+			}
+			.home{
+					color:#4cb5ff;
+					text-decoration: none;
+					margin-bottom: 100px;
+			}
+		}
+	}
+}

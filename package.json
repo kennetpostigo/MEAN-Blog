@@ -1,0 +1,25 @@
+{
+  "name": "KpoBlog",
+  "version": "0.0.1",
+  "description": "Kennet Postigo Blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "KennetPostigoBlog"
+  ],
+  "author": "Kennet Postigo",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.13.1",
+    "express": "^4.13.0",
+    "jsonwebtoken": "^5.0.2",
+    "method-override": "^2.3.3",
+    "mongoose": "^4.0.6",
+    "morgan": "^1.6.0",
+    "path": "^0.11.14"
+  }
+}

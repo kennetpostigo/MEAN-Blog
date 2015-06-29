@@ -1,0 +1,50 @@
+body {
+	#blogStream {
+		.post {
+			margin-top: 5vh;
+			.date {
+				.month {
+					font-size: 15px;
+					text-transform: uppercase;
+					font-weight: 300;
+				}
+				.day {
+					margin-top: -5px;
+					font-size: 30px;
+					text-transform: uppercase;
+					font-weight: 700;
+					margin-left: 3px;
+				}
+				.year {
+					margin-top: -5px;
+					font-size: 15px;
+					text-transform: uppercase;
+					font-weight: 250;
+				}
+			}
+			.title {
+				color: #333333;
+				text-decoration: none;
+				transition: text-shadow 500ms;
+				font-weight: 700;
+			}
+			.title:hover{
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+			}
+			.author {
+				color: #89a19d;
+			}
+			.quick-look {
+				color: #4c5859;
+			}
+			.full {
+				color: #4cb5ff;
+				text-decoration: none;
+			}
+		}
+		.space {
+			min-height:430px;
+			height: 430px;
+		}
+	}
+}

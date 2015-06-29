@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--STYLES-->
+	<link rel="stylesheet" href="/assets/bower_components/animate.css/animate.min.css">
+	<link rel="stylesheet" href="assets/bower_components/fontawesome/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/assets/styles/css/main.css">
+	<!-- SCRIPT -->
+	<script src="/assets/bower_components/angular/angular.js"></script>
+	<script src="/assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/assets/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="/assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="/app/blog/BlogStreamCtrl.js"></script>
+	<script src="/app/master/createPostController.js" ></script>
+	<script src="/app/main/config.js"></script>
+	<title>Kpostigo Blog</title>
+</head>
+
+<body ng-app="kpoBlog">
+	<div class="container-fluid">
+		<div class="row">
+			<section class="col-sm-12">
+				<header id="blog-header">
+					<nav>
+						<div class="pull-left Home">
+							<a ui-sref="blog">
+								<p>KP</p>
+							</a>
+						</div>
+						<div class="pull-right socialMedia">
+							<a href="http://www.kpostigo.com" target="_blank"><i class="fa fa-user"></i></a>
+							<a href="https://github.com/kennet003" target="_blank"><i class="fa fa-github"></i></a>
+							<a href="https://www.linkedin.com/pub/kennet-postigo/a0/b63/a77" target="_blank"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</nav>
+					<div class="blogSlogan">
+						<h1>CodeBar</h1>
+					</div>
+				</header>
+			</section>
+		</div>
+	</div>
+
+		<div ui-view>
+			
+		</div>
+	<div class="space">
+		
+	</div>
+	<footer class="navbar-fixed-bottom">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="about">
+					<p>Made By <a href="http://www.kpostigo.com"><b>Kennet Postigo</b></a></p>
+					<p>&#169;Copyright 2015 KennetPostigo</p>
+				</div>
+				<div class="pull-right socialMedia">
+					<a href="http://www.kpostigo.com" target="_blank"><i class="fa fa-user"></i></a>
+					<a href="https://github.com/kennet003" target="_blank"><i class="fa fa-github"></i></a>
+					<a href="https://www.linkedin.com/pub/kennet-postigo/a0/b63/a77" target="_blank"><i class="fa fa-linkedin"></i></a>
+				</div>
+			</div>
+		</div>
+		<a ui-sref="login"><p class="giddy">.</p></a>
+	</footer>
+</body>
+
+</html>

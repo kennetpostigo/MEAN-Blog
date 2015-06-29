@@ -1,0 +1,120 @@
+* {
+	//#7CA7CC;
+	//font-family: 'Open Sans', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+	#blog-header {
+		background: url("../..//images/blog-header1.jpeg") center bottom no-repeat;
+		background-size: cover;
+		height: 25vw;
+		max-height: 230px;
+		min-height: 200px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		nav {
+			.Home {
+				a {
+					color: #CBD0D5;
+					transition: color 400ms;
+				}
+				a:hover {
+					color: #fff;
+				}
+				display:inline-block;
+				color:aliceblue;
+				font-size: 30px;
+				margin-left: 20px;
+				margin-top: 20px;
+			}
+			.socialMedia {
+				a {
+					color: #CBD0D5;
+					transition: color 400ms;
+					i {
+						padding: 5px;
+					}
+				}
+				a:hover {
+					color: #fff;
+				}
+				display: inline-block;
+				color: aliceblue;
+				font-size: 30px;
+				margin-right: 20px;
+				margin-top: 20px;
+				padding-left:10px;
+				padding-right: 10px;
+			}
+		}
+		.blogSlogan {
+			padding-top: 5%;
+			text-align: center;
+			color: aliceblue;
+			h1 {
+				font-size: 70px;
+			}
+		}
+	}
+	footer {
+		box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.12), 0 -1px 2px rgba(0, 0, 0, 0.12);
+		margin-top: 20px;
+		min-height: 75px;
+		min-width: 100vw;
+		position: absolute;
+		bottom: 0px;
+		background: #2E3239;
+		z-index: 200;
+		.about {
+			p {
+				color: #A5A5A5;
+				a {
+					color: aliceblue;
+				}
+			}
+			;
+			display:inline-block;
+			color:aliceblue;
+			font-size: 18px;
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+		.socialMedia {
+			a {
+				color: aliceblue;
+				i {
+					padding: 5px;
+				}
+			}
+			a:hover {
+				color: #fff;
+			}
+			display: inline-block;
+			color: aliceblue;
+			font-size: 20px;
+			margin-right: 20px;
+			margin-top: 20px;
+			padding-left:10px;
+			padding-right: 10px;
+		}
+		.giddy {
+			width: 5px;
+			height: 3px;
+			color: lightgrey;
+		}
+	}
+}
+
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.col-sm-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.space {
+	height: 300px;
+}
