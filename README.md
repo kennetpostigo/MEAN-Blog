@@ -9,11 +9,11 @@ The Javascript Stack.
 
 To use the MEAN-Blog you need to have the following configured and Installed:
 
-- NPM
++ NPM
 * Then run NPM install
--Bower
++ Bower
 * Then run Bower install
--Sass/Gulp-Sass
++ Sass/Gulp-Sass
 * Then run sass -watch or gulp-sass
 
 ## Feedback or Contact
