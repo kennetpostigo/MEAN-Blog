@@ -19,4 +19,5 @@ To use the MEAN-Blog you need to have the following configured and Installed:
 ## Feedback or Contact
 
 Email me at kennetfpostigo@gmail.com
+
 Follow me on Twitter @kennettweets
