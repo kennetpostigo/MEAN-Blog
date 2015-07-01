@@ -20,9 +20,9 @@ To use the MEAN-Blog you need to have the following configured and Installed:
   * Then run sass -watch or gulp-sass.
 + Start the sever with Node
  * node server or nodemon server.
-+ Mongodb
- *You NEED mongodb to use this repository. Learn how to [install](http://docs.mongodb.org/manual/installation/) 
-
++ MongoDb
+ * You NEED mongodb to use this repository. Learn how to [install](http://docs.mongodb.org/manual/installation/) 
+ 
 ## Feedback or Contact
 
 Email me at kennetfpostigo@gmail.com
