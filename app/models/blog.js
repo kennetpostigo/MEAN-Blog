@@ -9,3 +9,4 @@ var BlogSchema = new Schema({
 });
 
 module.exports = mongoose.model('Blog', BlogSchema);
+
