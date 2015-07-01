@@ -1,14 +1,14 @@
 (function (window) {
 	'use strict';
 	var angular = window.angular;
-	angular.module('kpoBlog', ['ui.router', 'ui.bootstrap', 'kpoBlog.blogStream', 'kpoBlog.createPost'])
+	angular.module('kpoBlog', ['ui.router', 'ui.bootstrap', 'kpoBlog.blogStream', 'kpoBlog.createPost', 'kpoBlog.authService', 'kpoBlog.masterService', 'kpoBlog.blogService'])
 	
 		.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-			$urlRouterProvider.otherwise('/blog');
+			$urlRouterProvider.otherwise('/');
 			
 			$stateProvider
 				.state('blog', {
-					url: '/blog',
+					url: '/',
 					templateUrl: '/app/blog/partials/blogStream.html'
 				})
 				.state('login', {
