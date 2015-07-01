@@ -21,12 +21,12 @@
 //					controller: 'MainController'
 				})
 				.state('create', {
-					url: '/create',
+					url: '/create/:userId',
 					templateUrl: '/app/master/partials/createPost.html',
 //					controller: 'MasterController'
 				})
-				.state('post/:blog_id', {
-					url: '/post/:blog_id',
+				.state('post', {
+					url: '/post/:blogId',
 					templateUrl: '/app/blog/partials/post.html',
 //					controller: 'BlogPostController'
 				});

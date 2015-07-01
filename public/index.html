@@ -5,29 +5,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Kpostigo Blog</title>
-	
+
 	<!--STYLES-->
 	<link rel="stylesheet" href="/assets/bower_components/animate.css/animate.min.css">
 	<link rel="stylesheet" href="assets/bower_components/fontawesome/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/assets/styles/css/main.css">
-	
+
 	<!-- SCRIPT -->
 	<script src="/assets/bower_components/angular/angular.js"></script>
 	<script src="/assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="/assets/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script src="/assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="/app/auth/AuthService.js" ></script>
+	<script src="/app/auth/AuthService.js"></script>
 	<script src="/app/main/config.js"></script>
 	<script src="/app/main/MainController.js"></script>
 	<script src="/app/blog/BlogStreamController.js"></script>
 	<script src="/app/blog/BlogPostController.js"></script>
 	<script src="/app/blog/BlogService.js"></script>
-	<script src="/app/master/MasterController.js" ></script>
+	<script src="/app/master/MasterController.js"></script>
 	<script src="/app/master/MasterService.js"></script>
 </head>
 
-<body ng-app="kpoBlog" ng-controller="MainController as main" >
+<body ng-app="kpoBlog" ng-controller="MainController as main">
 	<div class="container-fluid">
 		<div class="row">
 			<section class="col-sm-12">
@@ -42,7 +42,13 @@
 							<a href="http://www.kpostigo.com" target="_blank"><i class="fa fa-user"></i></a>
 							<a href="https://github.com/kennet003" target="_blank"><i class="fa fa-github"></i></a>
 							<a href="https://www.linkedin.com/pub/kennet-postigo/a0/b63/a77" target="_blank"><i class="fa fa-linkedin"></i></a>
+						</div></br>
+
+						<div class="pull-right socialMedia">
+							<p ng-if="main.loggedIn" ng-click="main.logout()"><i class="fa fa-sign-out"></i>
+							</p>
 						</div>
+
 					</nav>
 					<div class="blogSlogan">
 						<h1>CodeBar</h1>
@@ -55,7 +61,7 @@
 	<div ui-view>
 
 	</div>
-	
+
 	<div class="space">
 
 	</div>

@@ -5905,8 +5905,8 @@ body #blogStream .post {
     color: #4cb5ff;
     text-decoration: none; }
 body #blogStream .space {
-  min-height: 430px;
-  height: 430px; }
+  min-height: 100px;
+  height: 100px; }
 
 * {
   font-family: 'Source Sans Pro', sans-serif; }

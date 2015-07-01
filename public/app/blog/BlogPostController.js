@@ -4,13 +4,13 @@
 	
 	angular.module('kpoBlog.blogController')
 
-		.controller('BlogPostController', ['BlogFactory', function (BlogFactory, $routeParams) {
+		.controller('BlogPostController', ['BlogFactory','$stateParams', function (BlogFactory, $stateParams) {
 			var self = this;
 			
-			BlogFactory.getPost($routeParams.blog_id)
+			BlogFactory.getPost($stateParams.blogId)
 				.success(function (data) {
 					self.blogData = data;
-			});
+				});
 			
 		}]);
 	

@@ -4,23 +4,23 @@
 	
 	angular.module('kpoBlog.masterController', [])
 		
-		.controller('MasterController', ['MasterFactory', function (MasterFactory, $routeParams) {
+		.controller('MasterController', ['MasterFactory', '$stateParams', function (MasterFactory, $stateParams) {
 			var self = this;
 			
-			self.createPost = function (id) {
+			self.createPost = function () {
 				self.message = '';
 				
-				MasterFactory.create(id, self.blogData)
+				MasterFactory.create($stateParams.userId, self.blogData)
 					.success(function (data) {
 						self.blogData = {};
 						self.message = data.message;
 					});
 			};
 			
-			self.updateUser = function (id, blogData, bid) {
+			self.updateUser = function () {
 				self.message = '';
 				
-				MasterFactory.update($routeParams.user_id, blogData, $routeParams.blog_id)
+				MasterFactory.update($stateParams.userId, blogData, $stateParams.blogId)
 					.success(function (data) {
 						self.blogData = {};
 					

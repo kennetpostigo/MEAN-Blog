@@ -29,7 +29,7 @@ module.exports = function (app, express) {
 	apiRouter.route('/blogStream')
 		//Get Blog Stream
 		.get(function (req, res) {
-			User.findOne({name: 'Kennet Postigo'}, {username: 0, date: 0, _id: 0, __v: 0})
+			User.findOne({name: 'Kennet Postigo'}, {username: 0, date: 0, __v: 0})
 				.populate({
 					path: 'posts',
 					select: 'title body date'
@@ -37,7 +37,7 @@ module.exports = function (app, express) {
 					if (err) {
 						res.send(err);
 					} else {
-						res.send(user);
+						res.json(user);
 					}
 				});
 		});
@@ -45,13 +45,15 @@ module.exports = function (app, express) {
 	apiRouter.route('/blogStream/:blog_id')
 		//Get Individual Blog Post
 		.get(function (req, res) {
-			Blog.findById(req.params.blog_id, function (err, blog) {
-				if (err) {
-					return res.json(err);
-				} else {
-					return res.json(blog);
-				}
-			});
+			Blog.findOne({_id: req.params.blog_id}, {title:1, body:1, author:1, date:1, _id:1})
+			.populate({path: 'author', select: 'name'})
+				.exec(function (err, blog) {
+					if (err) {
+						return res.send(err);
+					} else {
+						res.json(blog);
+					}
+				});
 		});
 	
 	apiRouter.post('/authenticate', function (req, res) {

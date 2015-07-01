@@ -1,4 +1,4 @@
-<div id="post" ng-controller="BlogPostController">
+<div id="post" ng-controller="BlogPostController as post">
 	<div class="col-sm-12">
 		<div class="container">
 			<div class="row">
@@ -7,30 +7,17 @@
 						<div class="row">
 							<div class="col-sm-1">
 								<div class="date">
-									<div class="month"><b>jun</b>
+									<div class="month"><b>{{post.blogData.date | date: 'MMM'}}</b>
 									</div>
-									<div class="day">25</div>
-									<div class="year">2015</div>
+									<div class="day">{{post.blogData.date | date: 'd'}}</div>
+									<div class="year">{{post.blogData.date | date: 'yyyy'}}</div>
 								</div>
 							</div>
 							<div class="col-sm-11">
-								<a ui-sref="post/1" class="title"><h1><b>Title of Blog Post</b></h1></a>
-								<p class="author">by Kennet Postigo</p>
+								<a ui-sref="post/1" class="title"><h1><b>{{post.blogData.title}}</b></h1></a>
+								<p class="author">{{post.blogData.author.name}}</p>
 								<div class="body-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									
-									<h2 class="paragraph-header"><b>lorm SHIT</b></h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repellendus ea nulla ullam eius architecto atque eaque voluptas, sequi quisquam dolores nobis ducimus dignissimos, facere, quibusdam quasi molestiae necessitatibus qui.</p>
+									{{post.blogData.body}}
 								</div>
 								<a ui-sref="blog" class="home"><p>Go Back To Feed</p></a>
 							</div>
