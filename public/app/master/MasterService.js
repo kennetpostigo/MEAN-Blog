@@ -10,7 +10,7 @@
 				return $http.post('/api/' + id + '/create', blogData);
 			};
 			
-			MasterFactory.update = function (id, blogData, bid) {
+			MasterFactory.update = function (id, bid, blogData) {
 				return $http.put('/api/' + id + '/blog/' + bid, blogData);
 			};
 			

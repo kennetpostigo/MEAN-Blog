@@ -5842,6 +5842,57 @@ body #createPost {
     min-height: 430px;
     height: 430px; }
 
+body #updatePost {
+  margin-top: 5vh; }
+  body #updatePost textarea, body #updatePost input {
+    outline: none; }
+  body #updatePost .minimal {
+    border: none;
+    box-shadow: none;
+    width: 100%; }
+  body #updatePost ::-webkit-input-placeholder {
+    color: #B3B3B3; }
+  body #updatePost :-moz-placeholder {
+    /* Firefox 18- */
+    color: #B3B3B3; }
+  body #updatePost ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #B3B3B3; }
+  body #updatePost :-ms-input-placeholder {
+    color: #B3B3B3; }
+  body #updatePost .post-title {
+    font-size: 36px;
+    color: #000000;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    font-syle: normal;
+    -webkit-font-smoothing: antialiased; }
+  body #updatePost .post-body {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    resize: none;
+    height: 30px;
+    min-height: 36vh;
+    overflow: auto; }
+  body #updatePost .custbtn {
+    border-radius: 999em;
+    background: transparent;
+    margin-bottom: 120px;
+    color: #ABD3FF;
+    border-color: #ABD3FF; }
+  body #updatePost .delete {
+    color: #c0392b;
+    border-color: #c0392b;
+    border-radius: 50%; }
+  body #updatePost .space {
+    min-height: 430px;
+    height: 430px; }
+
 body #post .article {
   margin-top: 5vh;
   margin-bottom: 100px; }
@@ -5873,8 +5924,14 @@ body #post .article {
     text-decoration: none;
     margin-bottom: 100px; }
 
+body #blogStream .newPost {
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+  border-radius: 50%;
+  color: #27ae60;
+  border-color: #27ae60; }
 body #blogStream .post {
-  margin-top: 5vh; }
+  margin-bottom: 20px; }
   body #blogStream .post .date .month {
     font-size: 15px;
     text-transform: uppercase;
@@ -5904,6 +5961,15 @@ body #blogStream .post {
   body #blogStream .post .full {
     color: #4cb5ff;
     text-decoration: none; }
+  body #blogStream .post .update {
+    color: #34495e;
+    border-color: #34495e;
+    border-radius: 50%; }
+  body #blogStream .post .tweak {
+    position: relative;
+    margin-top: -5px; }
+    body #blogStream .post .tweak h2 {
+      margin-top: -5px; }
 body #blogStream .space {
   min-height: 100px;
   height: 100px; }
@@ -5914,9 +5980,9 @@ body #blogStream .space {
 body #blog-header {
   background: url("../..//images/blog-header1.jpeg") center bottom no-repeat;
   background-size: cover;
-  height: 25vw;
-  max-height: 230px;
-  min-height: 200px;
+  height: 20vw;
+  max-height: 200px;
+  min-height: 190px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   body #blog-header nav .Home {
     display: inline-block;
@@ -5945,7 +6011,7 @@ body #blog-header {
     body #blog-header nav .socialMedia a:hover {
       color: #fff; }
   body #blog-header .blogSlogan {
-    padding-top: 5%;
+    padding-top: 4.5%;
     text-align: center;
     color: aliceblue; }
     body #blog-header .blogSlogan h1 {

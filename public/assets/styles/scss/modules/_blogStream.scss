@@ -1,7 +1,14 @@
 body {
 	#blogStream {
+		.newPost {
+			margin-bottom: 3vh;
+			margin-top: 2vh;
+			border-radius: 50%;
+			color:#27ae60;
+			border-color:#27ae60;
+		}
 		.post {
-			margin-top: 5vh;
+			margin-bottom: 20px;
 			.date {
 				.month {
 					font-size: 15px;
@@ -28,7 +35,7 @@ body {
 				transition: text-shadow 500ms;
 				font-weight: 700;
 			}
-			.title:hover{
+			.title:hover {
 				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
 			}
 			.author {
@@ -41,9 +48,22 @@ body {
 				color: #4cb5ff;
 				text-decoration: none;
 			}
+			.update {
+				color: #34495e;
+				border-color: #34495e;
+				border-radius: 50%;
+				//margin-bottom: -100px;
+			}
+			.tweak {
+				position: relative;
+				margin-top: -5px;
+				h2 {
+					margin-top: -5px;
+				}
+			}
 		}
 		.space {
-			min-height:100px;
+			min-height: 100px;
 			height: 100px;
 		}
 	}

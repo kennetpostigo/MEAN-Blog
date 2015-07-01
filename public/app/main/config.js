@@ -29,6 +29,11 @@
 					url: '/post/:blogId',
 					templateUrl: '/app/blog/partials/post.html',
 //					controller: 'BlogPostController'
+				})
+				.state('update', {
+					url: '/:userId/blog/:blogId',
+					templateUrl: '/app/master/partials/updatePost.html',
+//					controller: 'MasterController'
 				});
 		}]);
 }(window));

@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 var BlogSchema = new Schema({
 	'title': {type: String, required: true},
 	'author': {type: Schema.Types.ObjectId, ref: 'User'},
-	'body': {type: String, required: true},
+	'bodyContent': {type: String, required: true},
 	'date': {type: Date, default: Date.now}
 });
 

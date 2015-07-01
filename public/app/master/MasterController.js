@@ -4,7 +4,7 @@
 	
 	angular.module('kpoBlog.masterController', [])
 		
-		.controller('MasterController', ['MasterFactory', '$stateParams', function (MasterFactory, $stateParams) {
+		.controller('MasterController', ['MasterFactory', 'BlogFactory','$stateParams', '$location', function (MasterFactory, BlogFactory, $stateParams, $location) {
 			var self = this;
 			
 			self.createPost = function () {
@@ -14,24 +14,31 @@
 					.success(function (data) {
 						self.blogData = {};
 						self.message = data.message;
+						$location.path('/');
 					});
 			};
 			
-			self.updateUser = function () {
+			BlogFactory.getPost($stateParams.blogId)
+				.success(function (data) {
+					self.blogData = data;
+				});
+			
+			self.updatePost = function () {
 				self.message = '';
 				
-				MasterFactory.update($stateParams.userId, blogData, $stateParams.blogId)
+				MasterFactory.update($stateParams.userId, $stateParams.blogId, self.blogData)
 					.success(function (data) {
 						self.blogData = {};
-					
 						self.message = data.message;
+						$location.path('/');
 					});
 				
 			};
 			
-			self.deleteBlog = function (id, bid) {
-				MasterFactory.delete(id, bid)
+			self.deleteBlog = function () {
+				MasterFactory.delete($stateParams.userId, $stateParams.blogId)
 					.success(function (data) {
+						$location.path('/');
 						return 'Successfully Deleted Post';
 					});
 			};

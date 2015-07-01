@@ -32,7 +32,7 @@ module.exports = function (app, express) {
 			User.findOne({name: 'Kennet Postigo'}, {username: 0, date: 0, __v: 0})
 				.populate({
 					path: 'posts',
-					select: 'title body date'
+					select: 'title bodyContent date'
 				}).exec(function (err, user) {
 					if (err) {
 						res.send(err);
@@ -45,7 +45,7 @@ module.exports = function (app, express) {
 	apiRouter.route('/blogStream/:blog_id')
 		//Get Individual Blog Post
 		.get(function (req, res) {
-			Blog.findOne({_id: req.params.blog_id}, {title:1, body:1, author:1, date:1, _id:1})
+			Blog.findOne({_id: req.params.blog_id}, {title:1, bodyContent:1, author:1, date:1, _id:1})
 			.populate({path: 'author', select: 'name'})
 				.exec(function (err, blog) {
 					if (err) {
@@ -123,13 +123,12 @@ module.exports = function (app, express) {
 	
 		//Update Individial Blog Post
 		.put(function (req, res) {
-			Blog.findById(req.params.user_id, function (err, blog) {
+			Blog.findById(req.params.blog_id, function (err, blog) {
 				if (err) {
 					return res.send(err);
-				} else if (req.body.title) {
+				} else if (req.body.title && req.body.bodyContent) {
 					blog.title = req.body.title;
-				} else if (req.body.body) {
-					blog.body = req.body.body;
+					blog.bodyContent = req.body.bodyContent;
 				}
 				
 				blog.save(function (err) {
@@ -169,7 +168,7 @@ module.exports = function (app, express) {
 			var blog = new Blog();
 			blog.title = req.body.title;
 			blog.author = req.params.user_id;
-			blog.body = req.body.body;
+			blog.bodyContent = req.body.bodyContent;
 			blog.save(function (err) {
 				if (err) {
 					return res.json(err);

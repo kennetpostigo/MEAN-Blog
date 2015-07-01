@@ -1,11 +1,15 @@
 <div id="blogStream" ng-controller="BlogStreamController as stream">
 	<div class="col-sm-12">
 		<div class="container">
-		<p ng-if="stream.loggedIn"><a ui-sref="create({userId: stream.feed._id})"><i class="fa fa-pencil-square-o"></i> Create Post</a></p>
+				<a ng-if="stream.loggedIn" class="btn btn-default newPost" ui-sref="create({userId: stream.feed._id})"><i class="fa fa-plus"></i></a>
+			
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1">
-					<section class="post">
-						<div ng-repeat="post in stream.feed.posts">
+					<div ng-repeat="post in stream.feed.posts">
+						<section class="post">
+							<div class="pull-right">
+								<a ui-sref="update({userId:stream.feed._id, blogId:post._id})" class="btn btn-default update"><i class="fa fa-pencil"></i></a>
+							</div>
 							<div class="row">
 								<div class="col-sm-1">
 									<div class="date">
@@ -15,24 +19,24 @@
 										<div class="year">{{post.date | date: 'yyyy'}}</div>
 									</div>
 								</div>
-								<div class="col-sm-11">
+								<div class="col-sm-11 tweak">
 									<a ui-sref="post({blogId: post._id})" class="title"><h2><b>{{post.title}}</b></h2></a>
 									<p class="author">by {{stream.feed.name}}</p>
 									<div class="quick-look">
-										<p>{{post.body}}</p>
+										<p>{{post.bodyContent}}</p>
 									</div>
 									<a ui-sref="post({blogId: post._id})" class="full">
 										<p>Read More</p>
 									</a>
+									<hr>
 								</div>
 							</div>
-						</div>
-
-					</section>
+						</section>
+					</div>
 				</div>
 			</div>
-			
-	<div class="space">
 
-	</div>
-</div>
+			<div class="space">
+
+			</div>
+		</div>

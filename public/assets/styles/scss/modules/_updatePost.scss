@@ -1,0 +1,67 @@
+body {
+	#updatePost {
+		margin-top: 5vh;
+		textarea, input {
+			outline: none;
+		}
+		.minimal {
+			border: none;
+			box-shadow: none;
+			width: 100%;
+			//			margin-bottom: 10px;
+		}
+		::-webkit-input-placeholder {
+			color: #B3B3B3;
+		}
+		:-moz-placeholder {
+			/* Firefox 18- */
+			
+			color: #B3B3B3;
+		}
+		::-moz-placeholder {
+			/* Firefox 19+ */
+			
+			color: #B3B3B3;
+		}
+		:-ms-input-placeholder {
+			color: #B3B3B3;
+		}
+		.post-title {
+			font-size: 36px;
+			color: #000000;
+			font-weight: 700;
+			line-height: 1.2;
+			margin-bottom: 4px;
+			font-syle: normal;
+			-webkit-font-smoothing: antialiased;
+		}
+		.post-body {
+			font-size: 18px;
+			line-height: 1.5;
+			font-weight: 400;
+			font-style: normal;
+			color: #000000;
+			-webkit-font-smoothing: antialiased;
+			resize: none;
+			height: 30px;
+			min-height: 36vh;
+			overflow: auto;
+		}
+		.custbtn {
+			border-radius: 999em;
+			background: rgba(0, 0, 0, 0);
+			margin-bottom: 120px;
+			color: #ABD3FF;
+			border-color: #ABD3FF;
+		}
+		.delete{
+			color:#c0392b;
+			border-color: #c0392b;
+			border-radius: 50%;
+		}
+		.space {
+			min-height: 430px;
+			height: 430px;
+		}
+	}
+}

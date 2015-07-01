@@ -1,8 +1,9 @@
-<div id="createPost" ng-controller="MasterController as master">
+<div id="updatePost" ng-controller="MasterController as master">
 	<div class="col-sm-12">
 		<div class="container">
 			<div class="row">
-				<form ng-submit="master.createPost()">
+			<button class="btn btn-default delete pull-right" ng-click="master.deleteBlog()"><i class="fa fa-times"></i></button>
+				<form ng-submit="master.updatePost()">
 					<input type="text" class="minimal post-title" ng-model="master.blogData.title" placeholder="Title">
 					<textarea name="" id="" class="minimal post-body" ng-model="master.blogData.bodyContent" placeholder="Write a post..."></textarea>
 					<input type="submit" class="btn btn-default custbtn">
