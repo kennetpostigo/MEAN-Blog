@@ -3,8 +3,10 @@
 
 This is a little blog project that utilizes every part of the MEAN Stack.
 I made this Project to help Newcomers dissect and understand how to use
-The Javascript Stack. Once you have cloned the repository and installed 
-it you will have a nice little blog.
+The Javascript Stack. I'm hoping that this can help people learn how to 
+wire up a MEAN project, understand Mongoose Referencing, how to Route a 
+RESTful API, and wire up the front end to talk to the API.Once you 
+have cloned the repository and installed it you will have a nice little blog.
 
 ## Repository Requirements
 
