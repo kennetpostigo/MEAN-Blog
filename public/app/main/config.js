@@ -1,27 +1,34 @@
 (function (window) {
 	'use strict';
 	var angular = window.angular;
-	angular.module('kpoBlog', ['ui.router', 'ui.bootstrap', 'kpoBlog.blogStream', 'kpoBlog.createPost', 'kpoBlog.authService', 'kpoBlog.masterService', 'kpoBlog.blogService'])
+	angular.module('kpoBlog', ['ui.router', 'ui.bootstrap', 'kpoBlog.mainController', 'kpoBlog.authService', 'kpoBlog.blogController', 'kpoBlog.blogService', 'kpoBlog.masterController', 'kpoBlog.masterService'])
 	
-		.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+		.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
+			
+			$httpProvider.interceptors.push('AuthInterceptor');
+			
 			$urlRouterProvider.otherwise('/');
 			
 			$stateProvider
 				.state('blog', {
 					url: '/',
-					templateUrl: '/app/blog/partials/blogStream.html'
+					templateUrl: '/app/blog/partials/blogStream.html',
+//					controller: 'BlogPostController'
 				})
 				.state('login', {
 					url: '/login',
-					templateUrl: '/app/master/partials/login.html'
+					templateUrl: '/app/master/partials/login.html',
+//					controller: 'MainController'
 				})
 				.state('create', {
 					url: '/create',
-					templateUrl: '/app/master/partials/createPost.html'
+					templateUrl: '/app/master/partials/createPost.html',
+//					controller: 'MasterController'
 				})
-				.state('post/1', {
-					url: '/post/1',
-					templateUrl: '/app/blog/partials/post.html'
+				.state('post', {
+					url: '/post/:blog_id',
+					templateUrl: '/app/blog/partials/post.html',
+//					controller: 'BlogPostController'
 				});
 		}]);
 }(window));

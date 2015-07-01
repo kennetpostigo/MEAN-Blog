@@ -134,7 +134,7 @@ module.exports = function (app, express) {
 					if (err) {
 						return res.send(err);
 					} else {
-						res.json(blog);
+						res.json({message: 'Blog Post Was Successfully Updated'});
 					}
 				});
 				
@@ -154,7 +154,7 @@ module.exports = function (app, express) {
 							if (err) {
 								return res.send(err);
 							} else {
-								res.json({Blog: 'Post Deleted'});
+								res.json({message: 'Blog Post Was Successfully Deleted'});
 							}
 						});
 					}
@@ -178,7 +178,7 @@ module.exports = function (app, express) {
 							if (err) {
 								res.json(err);
 							} else {
-								res.send(blog);
+								res.send({message: 'Blog Post Was Successfully Created.'});
 							}
 						});
 					});

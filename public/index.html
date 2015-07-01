@@ -13,16 +13,18 @@
 	<script src="/assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="/assets/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script src="/assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="/app/blog/BlogStreamCtrl.js"></script>
-	<script src="/app/master/createPostController.js"></script>
 	<script src="/app/auth/AuthService.js" ></script>
-	<script src="/app/master/MasterService.js"></script>
-	<script src="/app/blog/BlogService.js"></script>
 	<script src="/app/main/config.js"></script>
+	<script src="/app/main/MainController.js"></script>
+	<script src="/app/blog/BlogStreamController.js"></script>
+	<script src="/app/blog/BlogPostController.js"></script>
+	<script src="/app/blog/BlogService.js"></script>
+	<script src="/app/master/MasterController.js" ></script>
+	<script src="/app/master/MasterService.js"></script>
 	<title>Kpostigo Blog</title>
 </head>
 
-<body ng-app="kpoBlog">
+<body ng-app="kpoBlog" ng-controller="MainController as main" >
 	<div class="container-fluid">
 		<div class="row">
 			<section class="col-sm-12">
