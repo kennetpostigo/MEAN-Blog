@@ -1,27 +1,24 @@
-<div id="login">
+<div id="login" ng-controller="MainController as login" >
 	<div class="row">
 		<div class="container">
 			<section class="userLogin col-sm-8">
-				<form ng-submit="login.submit()" class="col-sm-offset-6 col-sm-6" name="loginForm" novalidate>
+				<form ng-submit="login.logon()" class="col-sm-offset-6 col-sm-6" name="loginForm" novalidate>
 					<h2>Login</h2>
 					<div class="box col-sm-12">
 						<div class="input-group">
-							<span class="input-group-addon" id="uname"><i class="fa fa-user"></i></span>
-							<div class="form-group" ng-class="{ 'has-error' : loginForm.uname.$invalid && !loginForm.uname.$pristine, 'has-success' : loginForm.uname.$valid}">
-								<input type="text" class="form-control" ng-class="{ 'bg-danger' : loginForm.uname.$invalid && !loginForm.uname.$pristine, 'bg-success' : loginForm.uname.$valid}" placeholder="Username" aria-describedby="uname" name="uname" id="uname" ng-model="login.user.username" required>
+							<span class="input-group-addon" id="username"><i class="fa fa-user"></i></span>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username" aria-describedby="username" name="username" id="username" ng-model="login.loginData.username" required>
 							</div>
 						</div>
 						
 
 						<div class="input-group">
 							<span class="input-group-addon" id="pwd"><i class="fa fa-lock"></i></span>
-							<div class="form-group" ng-class="{ 'has-error' : loginForm.pwd.$invalid && !loginForm.pwd.$pristine, 'has-success' : loginForm.pwd.$valid }">
-								<input type="password" class="form-control" ng-class="{ 'bg-danger' : loginForm.pwd.$invalid && !loginForm.pwd.$pristine, 'bg-success' : loginForm.pwd.$valid}" placeholder="Password" aria-describedby="pwd" name="pwd" id="pwd" ng-model="login.user.password" ng-minlength="6" required>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password" aria-describedby="password" name="password" id="password" ng-model="login.loginData.password" required>
 							</div>
 						</div>
-						
-
-						<a href="">Forgot Your Password?</a>
 						<button type="submit" class="btn btn-md">Login</button>
 					</div>
 				</form>

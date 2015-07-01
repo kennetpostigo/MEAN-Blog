@@ -9,7 +9,7 @@
 			
 			BlogFactory.blogstream()
 				.success(function (data) {
-					self.feed = data;
+					return self.feed = data;
 			});
 			
 		}]);

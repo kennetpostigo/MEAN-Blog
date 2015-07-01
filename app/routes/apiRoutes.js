@@ -188,5 +188,3 @@ module.exports = function (app, express) {
 	
 	return apiRouter;
 };
-
-//date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()

@@ -25,7 +25,7 @@
 					templateUrl: '/app/master/partials/createPost.html',
 //					controller: 'MasterController'
 				})
-				.state('post', {
+				.state('post/:blog_id', {
 					url: '/post/:blog_id',
 					templateUrl: '/app/blog/partials/post.html',
 //					controller: 'BlogPostController'

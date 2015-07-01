@@ -12,7 +12,7 @@
 				self.loggedIn = AuthFactory.isLoggedIn();
 			});
 			
-			self.login = function () {
+			self.logon = function () {
 				self.error = '';
 				
 				AuthFactory.login(self.loginData.username, self.loginData.password)
