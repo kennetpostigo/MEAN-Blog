@@ -2,6 +2,7 @@
 	<div class="col-sm-12">
 		<div class="container">
 				<a ng-if="stream.loggedIn" class="btn btn-default newPost" ui-sref="create({userId: stream.feed._id})"><i class="fa fa-plus"></i></a>
+				<a href="" ng-if="main.loggedIn" ng-click="main.logout()" class="pull-right btn btn-default logout"><i class="fa fa-sign-out"></i></a>
 			
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1">
@@ -10,6 +11,7 @@
 							<div class="pull-right">
 								<a ui-sref="update({userId:stream.feed._id, blogId:post._id})" class="btn btn-default update"><i class="fa fa-pencil"></i></a>
 							</div>
+							
 							<div class="row">
 								<div class="col-sm-1">
 									<div class="date">

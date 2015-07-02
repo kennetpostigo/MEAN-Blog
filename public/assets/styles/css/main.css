@@ -5930,6 +5930,12 @@ body #blogStream .newPost {
   border-radius: 50%;
   color: #27ae60;
   border-color: #27ae60; }
+body #blogStream .logout {
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+  border-radius: 50%;
+  color: #27ae60;
+  border-color: #27ae60; }
 body #blogStream .post {
   margin-bottom: 20px; }
   body #blogStream .post .date .month {
@@ -5989,7 +5995,7 @@ body #blog-header {
     color: aliceblue;
     font-size: 30px;
     margin-left: 20px;
-    margin-top: 20px; }
+    margin-top: 10px; }
     body #blog-header nav .Home a {
       color: #CBD0D5;
       transition: color 400ms; }
@@ -6000,7 +6006,7 @@ body #blog-header {
     color: aliceblue;
     font-size: 30px;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px; }
     body #blog-header nav .socialMedia a {

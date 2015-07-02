@@ -4,7 +4,7 @@
 	
 	angular.module('kpoBlog.masterController', [])
 		
-		.controller('MasterController', ['MasterFactory', 'BlogFactory','$stateParams', '$location', function (MasterFactory, BlogFactory, $stateParams, $location) {
+		.controller('MasterController', ['MasterFactory', 'BlogFactory', '$stateParams', '$location', function (MasterFactory, BlogFactory, $stateParams, $location) {
 			var self = this;
 			
 			self.createPost = function () {

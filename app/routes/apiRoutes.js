@@ -32,7 +32,8 @@ module.exports = function (app, express) {
 			User.findOne({name: 'Kennet Postigo'}, {username: 0, date: 0, __v: 0})
 				.populate({
 					path: 'posts',
-					select: 'title bodyContent date'
+					select: 'title bodyContent date',
+					options: {sort:{date: -1}}
 				}).exec(function (err, user) {
 					if (err) {
 						res.send(err);
@@ -151,7 +152,7 @@ module.exports = function (app, express) {
 					if (err) {
 						return res.send(err);
 					} else {
-						Blog.remove(req.params.blog_id, function (err, blog) {
+						Blog.remove({_id: req.params.blog_id}, function (err, blog) {
 							if (err) {
 								return res.send(err);
 							} else {
