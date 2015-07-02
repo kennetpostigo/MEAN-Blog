@@ -9,7 +9,7 @@
 					<div ng-repeat="post in stream.feed.posts">
 						<section class="post">
 							<div class="pull-right">
-								<a ui-sref="update({userId:stream.feed._id, blogId:post._id})" class="btn btn-default update"><i class="fa fa-pencil"></i></a>
+								<a ng-show="post.loggedIn" ui-sref="update({userId:stream.feed._id, blogId:post._id})" class="btn btn-default update"><i class="fa fa-pencil"></i></a>
 							</div>
 							
 							<div class="row">
