@@ -16,7 +16,7 @@ To use the MEAN-Blog you need to have the following configured and Installed:
   * Then run NPM install.
 + Bower
   * Then run Bower install.
-+ Sass/Gulp-Sass
++ Sass-watch
   * Then run sass -watch.
 + Start the sever with Node
  * node server or nodemon server.
